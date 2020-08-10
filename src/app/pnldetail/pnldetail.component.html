@@ -1,0 +1,33 @@
+<H4>Pnl Detail</H4>
+<div class="container">
+<table class="table">
+  <thead>
+  <tr>
+    <th>Region</th>
+    <th>Ticker</th>
+    <th>DailyChange($)</th>
+    <th>Position</th>
+    <th>Current_price($)</th>
+    <th>Pre_close($)</th>
+  </tr>
+</thead>
+  <tbody>
+    <tr *ngFor="let pnl of pnls" >
+    
+    <td>{{pnl.portfolio}}</td>
+    <td>{{pnl.ticker}}</td>
+    <td>{{pnl.dailyChange}}</td>
+    <td>{{pnl.position}}</td>
+    <td>{{pnl.current_price}}</td>
+    <td>{{pnl.pre_close}}</td>
+
+    <!--<td><button (click)="getPnlDetail(pnl.portfolio)" class="btn btn-success">Detail</button></td>-->
+  </tr>
+  </tbody>
+ 
+</table>
+<div>
+ 
+  <a routerLink="/pnls">&lt;&lt;Back</a>
+</div>
+</div>

@@ -1,0 +1,23 @@
+
+<div class="alert alert-success" *ngIf='message'>{{message}}</div>
+<div class="container">
+<table class="table">
+  <thead>
+  <tr>
+    <th>Region</th>
+    <th>DailyTotalChange($)</th>
+  </tr>
+</thead>
+  <tbody>
+    <tr *ngFor="let pnl of pnls" >
+    
+    <td>{{pnl.portfolio}}</td>
+    <td>{{pnl.dailyTotalChange}}</td>
+    <td><a routerLink="/pnldetails/{{pnl.portfolio}}">Detail</a></td>
+    <!--<td><button (click)="getPnlDetail(pnl.portfolio)" class="btn btn-success">Detail</button></td>-->
+  </tr>
+  </tbody>
+ 
+</table>
+
+</div>
